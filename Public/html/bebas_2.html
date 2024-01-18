@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Berita</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"  rel="stylesheet" />
+</head>
+<body>
+    <div class="mx-auto p-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold">Struktur Organisasi Pemerintahan Desa Bangun Sari</h2>
+        </div>
+    
+        <!-- Kepala Desa -->
+        <div class="flex flex-col items-center mb-6 relative">
+            <div class="w-24 h-24 bg-green-500 rounded-full mb-3"></div>
+            <p class="text-xl font-semibold">Kepala Desa</p>
+            <p>Nama Kepala Desa</p>
+            <!-- Garis vertikal penghubung -->
+            <div class="sm:hidden w-0.5 bg-green-600 h-10 my-3"></div>
+            <div class="hidden sm:block absolute w-0.5 bg-green-600 h-[95px] my-3 -bottom-[110px]"></div>  
+        </div>
+    
+        <!-- Struktur dibawah Kepala Desa untuk tampilan besar -->
+        <div class="hidden sm:flex justify-center items-center gap-4 mb-6">
+            <!-- Sekretaris Desa -->
+            <div class="flex flex-col items-center">
+                <div class="w-20 h-20 bg-green-400 rounded-full mb-3"></div>
+                <p class="text-lg font-semibold">Sekretaris Desa</p>
+                <p>Nama Sekretaris</p>
+            </div>
+    
+            <!-- Garis horizontal penghubung -->
+            <div class="flex-grow border-t-4 border-green-600"></div>
+    
+            <!-- Bendahara Desa -->
+            <div class="flex flex-col items-center">
+                <div class="w-20 h-20 bg-green-400 rounded-full mb-3"></div>
+                <p class="text-lg font-semibold">Bendahara Desa</p>
+                <p>Nama Bendahara</p>
+            </div>
+        </div>
+    
+        <!-- Struktur dibawah Kepala Desa untuk tampilan mobile -->
+        <div class="sm:hidden flex flex-col items-center gap-4 mb-6">
+            <!-- Sekretaris Desa -->
+            <div class="flex flex-col items-center">
+                <div class="w-20 h-20 bg-green-400 rounded-full mb-3"></div>
+                <p class="text-lg font-semibold">Sekretaris Desa</p>
+                <p>Nama Sekretaris</p>
+                <div class="w-0.5 bg-green-600 h-10 my-3"></div> <!-- Garis vertikal penghubung -->
+            </div>
+    
+            <!-- Bendahara Desa -->
+            <div class="flex flex-col items-center">
+                <div class="w-20 h-20 bg-green-400 rounded-full mb-3"></div>
+                <p class="text-lg font-semibold">Bendahara Desa</p>
+                <p>Nama Bendahara</p>
+                <div class="w-0.5 bg-green-600 h-10 my-3"></div> <!-- Garis vertikal penghubung -->
+            </div>
+    
+            <!-- Tambahkan lebih banyak anggota dengan format yang sama -->
+        </div>
+    </div>
+    
+    
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+</body>
+</html>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Cek ID elemen dan terapkan animasi yang sesuai
+              if (entry.target.classList.contains('efek-masuk')) {
+                entry.target.classList.add('animate-masuk');
+              } else if (entry.target.classList.contains('geserBawah')) {
+                entry.target.classList.add('animate-geserBawah');
+                entry.target.classList.remove('opacity-0');
+              } else if (entry.target.classList.contains('geserKiri')) {
+                entry.target.classList.add('animate-geserKiri');
+                entry.target.classList.remove('opacity-0');
+              } else if (entry.target.classList.contains('geserKanan')) {
+                entry.target.classList.add('animate-geserKanan');
+                entry.target.classList.remove('opacity-0');
+              }
+              else if (entry.target.classList.contains('subJudul')) {
+                entry.target.classList.add('animate-subJudul');
+                entry.target.classList.remove('opacity-0');
+              }
+            } else {
+              // Opsional: Hapus animasi jika elemen keluar dari viewport
+              // entry.target.classList.remove('animate-masuk', 'animate-geserBawah');
+            }
+          });
+        });
+      
+        // Targetkan semua elemen yang ingin di-animasikan
+        const targets = document.querySelectorAll(".efek-masuk, .geserBawah, .geserKiri, .geserKanan, .subJudul");
+        targets.forEach(target => {
+          observer.observe(target); // Mulai observing elemen target
+        });
+      });
+</script>
+
+
+
+        <!-- Cards Start -->
+
+        <section>
+            <div class="mx-auto pt-16 ">
+              <div class="grid grid-cols-1 pt-12 md:pt-36 mb-[60px] md:mb-52 gap-y-11 gap-x-10 divide-y md:grid-cols-2 md:divide-y-0 md:max-w-[768px] mx-auto">
+                <div class="md:w-full md:col-span-2">
+                  <div class="flex lecturer md:w-1/2 mx-auto">
+                    <div class="rounded-[100px] border-nature-100 border-8 w-[100px] md:w-[150px] h-[120px] md:h-[150px] p-[2px] md:p-[6px] inline-block overflow-hidden">
+                      <img src="https://source.unsplash.com/600x600?potrait" class="object-cover  object-center" alt="" />
+                    </div>
+                    <div class="flex-1 relative">
+                      <div class="font-opensans font-bold text-base absolute left-[14px] md:top-8 lecturer-name">
+                        <h3 class="align-text-bottom">Radhinka Bagaskara, S.Si.Kom., M.Si., M.Sc</h3>
+                      </div>
+                      <span class="bg-nature-100 w-full h-2 block absolute top-[54%] -left-1"></span>
+                      <p class="font-opensans text-xs absolute top-[68%] left-[14px]">JABATAN DOSEN</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex lecturer">
+                  <div class="rounded-full border-nature-100 border-8 aspect-square w-[100px] md:w-[150px] h-[100px] md:h-[150px] p-[9px] inline-block">
+                    <img src="https://source.unsplash.com/700x700?potrait" class="rounded-full object-cover object-top aspect-square" alt="" />
+                  </div>
+                  <div class="flex-1 relative">
+                    <div class="font-opensans font-bold text-base absolute left-[14px] lecturer-name md:top-8">
+                      <h3 class="align-text-bottom ">Radhinka Bagaskara, S.Si.Kom., M.Si., M.Sc</h3>
+                    </div>
+                    <span class="bg-nature-100 w-full h-2 block absolute top-[54%] -left-1"></span>
+                    <p class="font-opensans text-xs absolute top-[68%] left-[14px]">JABATAN DOSEN</p>
+                  </div>
+                </div>
+                <div class="flex lecturer">
+                  <div class="rounded-full border-nature-100 border-8 aspect-square w-[100px] md:w-[150px] h-[100px] md:h-[150px] p-[9px] inline-block">
+                    <img src="https://source.unsplash.com/700x700?potrait" class="rounded-full object-cover object-top aspect-square" alt="" />
+                  </div>
+                  <div class="flex-1 relative">
+                    <div class="font-opensans font-bold text-base absolute left-[14px] lecturer-name md:top-8">
+                      <h3 class="align-text-bottom">Radhinka Bagaskara, S.Si.Kom., M.Si., M.Sc</h3>
+                    </div>
+                    <span class="bg-nature-100 w-full h-2 block absolute top-[54%] -left-1"></span>
+                    <p class="font-opensans text-xs absolute top-[68%] left-[14px]">JABATAN DOSEN</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+      
+                <!-- Cards End -->
+
+
+                // plugin(function({ addUtilities, theme, variants }) {
+                  //   const animationDelayUtilities = Object.entries(theme('animationDelay'))
+                  //     .reduce((acc, [key, value]) => {
+                  //       acc[`.anim-delay-${key}`] = { 'animation-delay': value }
+                  //       return acc
+                  //     }, {})
+              
+                  //   addUtilities(animationDelayUtilities, variants('animationDelay'))
+                  // }),

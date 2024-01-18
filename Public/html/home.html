@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"  rel="stylesheet" />
+    <link rel="icon" href="../assets/logo-e.png" type="image/x-icon">
+</head>
+<body>
+    <header class="fixed z-50 w-full h-[35px]">
+        <nav class="bg-nature-50 border-gray-200 px-4 lg:px-6 py-2.5 md:py-4 lg:py-6 dark:bg-gray-800">
+            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+                <a href="https://web.lampungtengahkab.go.id/" class="flex items-center">
+                    <img src="../assets/Lambang_Kabupaten_Lampung_Tengah.png" class="mr-3 ssm:h-9 md:h-12 lg:h-16" alt="kabupaten Logo" />
+                    <span class="self-center text-sm md:text-lg lg:text-xl font-semibold whitespace-nowrap dark:text-white">Bangun Sari</span>
+                </a>
+                <div class="flex items-center lg:order-2">
+                    <a href="./about.html" class="text-gray-800 dark:text-white hover:bg-nature-100 hover:text-white focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm md:text-lg lg:text-xl px-4 lg:px-5 py-2 lg:py-2.5 mr-2  focus:outline-none p-4 hover:scale-110 transition ease-in-out duration-700">Tentang Kami</a>
+                    <img src="../assets/logo_kkn.jpg" class="mr-3 hidden lg:block ssm:h-9 md:h-12 lg:h-16 rounded-xl" alt="KKN Logo" />
+                    <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition ease-in-out duration-700" aria-controls="mobile-menu-2" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                <div class="hidden justify-between items-center w-full ssm:rounded-b-3xl lg:rounded-none lg:flex lg:w-auto lg:order-1 lg:text-[18px]" id="mobile-menu-2">
+                    <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                        <li>
+                            <a href="./home.html" class="block py-2 pr-4 pl-3 text-nature-200 rounded bg-gray-100 lg:bg-transparent lg:text-nature-100 lg:p-0 lg:hover:scale-125 transition duration-300" aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="./sejarah.html" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-nature-100  lg:p-0 lg:hover:scale-125 transition duration-300">Sejarah</a>
+                        </li>
+                        <li id="menu-potensi" class="group lg:pb-2 relative">
+                            <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-nature-100  lg:p-0 lg:hover:scale-125 transition duration-300">Potensi
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="ssm:hidden lg:inline-block rotate-90 -translate-y-1 group-hover:rotate-[270deg] group-hover:translate-y-1 transition duration-300">
+                                    <path d="M12 5L19 12L12 19" stroke="#86A789" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <!-- Submenu -->
+                            <ul class="hidden ssm:pl-11 ssm:w-full lg:w-fit group mt-2 space-y-2 lg:fixed lg:space-y-0 lg:flex-col lg:group-hover:block ssm:px-4 py-4 lg:px-10 lg:rounded-2xl lg:rounded-tl-none lg:group-hover:animate-subDropDown rounded-2xl z-50 list-image-[url(../assets/symbol/arrow.svg)]">
+                                <li><a href="./potensi/pertanian.html" class="hover:text-white transition duration-3000">Pertanian</a></li>
+                                <li><a href="./potensi/industri_tempe.html" class="hover:text-white transition duration-300">Industri</a></li>
+                                <li><a href="./potensi/kerajinan.html" class="hover:text-white transition duration-300">Kerajinan</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./Perangkat_desa.html" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-nature-100  lg:p-0 lg:hover:scale-125 transition duration-300">Struktur</a>
+                        </li>
+                        <li id="menu-sarana-prasarana" class="group lg:pb-2 relative">
+                            <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 group lg:hover:bg-transparent lg:border-0 lg:hover:text-nature-100 lg:p-0 lg:hover:scale-125 transition duration-300">Sarana & Prasarana
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="ssm:hidden lg:inline-block rotate-90 -translate-y-1 group-hover:rotate-[270deg] group-hover:translate-y-1 transition duration-300">
+                                    <path d="M12 5L19 12L12 19" stroke="#86A789" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                              <!-- Submenu -->
+                            <ul class="hidden ssm:pl-11 ssm:w-full lg:w-fit group mt-2 space-y-2 lg:fixed lg:space-y-0 lg:flex-col lg:group-hover:block ssm:px-4 py-4 lg:py-4 lg:px-10 lg:rounded-2xl lg:rounded-tl-none lg:group-hover:animate-subDropDown rounded-2xl list-image-[url(../assets/symbol/arrow.svg)]">
+                                <li><a href="./sarana&Prasarana/pendidikan.html" class="hover:text-white transition duration-300">Pendidikan</a></li>
+                                <li><a href="./sarana&Prasarana/pemerintahan.html" class="hover:text-white transition duration-300">Pemerintahan & Umum</a></li>
+                                <li><a href="./sarana&Prasarana/Keagamaan.html" class="hover:text-white transition duration-300">Keagamaan</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./artikel.html" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-nature-100 lg:p-0 lg:hover:scale-125 transition duration-300">Artikel</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="relative lg:hidden animate-masuk">
+        <div id="default-carousel" class="relative w-full z-0" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-[427px] overflow-hidden rounded-b-lg md:h-96">
+                 <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out bg-cover bg-center" style="background-image: url(../assets/MAKAN.jpg);" data-carousel-item>
+                    <div class="h-full w-full bg-neutral-300 mix-blend-multiply"></div>
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out bg-cover bg-center" style="background-image: url(../assets/foto\ pemaparan.jpg);" data-carousel-item>
+                    <div class="h-full w-full bg-neutral-300 mix-blend-multiply"></div>
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out bg-cover bg-center"  style="background-image: url(../assets/MAKAN.jpg);" data-carousel-item>
+                    <div class="h-full w-full bg-neutral-300 mix-blend-multiply"></div>
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out bg-cover bg-center"  style="background-image: url(../assets/MASAK.jpg);" data-carousel-item>
+                    <div class="h-full w-full bg-neutral-300 mix-blend-multiply"></div>
+                </div>
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 space-x-3 -translate-x-1/2 bottom-5 left-1/2 hidden sm:flex">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 left-0 z-30 items-center justify-center h-full px-4 cursor-pointer group focus:outline-none hidden sm:flex" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 right-0 z-30 items-center justify-center h-full px-4 cursor-pointer group focus:outline-none hidden sm:flex" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+        <!-- selamat datang -->
+        <div class="absolute mb-16 w-[234px] bottom-9 right-1/2 translate-x-1/2">
+            <div class="mb-[36px] py-4 text-center text-white">
+                <h1 class="font-bold uppercase mb-4 text-[20px] ">selamat datang</h1>
+                <p class="text-[16px] uppercase">di website kampung bangun sari</p>  
+            </div>
+        </div>
+    </div>
+    <div class="hidden relative lg:block pt-[85px] animate-masuk">
+        <div id="default-carousel" class="relative w-full z-0" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-[600px] overflow-hidden rounded-b-lg">
+                 <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out bg-cover bg-top" style="background-image: url(../assets/ECO.jpg);" data-carousel-item>
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out bg-cover bg-center" style="background-image: url(../assets/MAKAN.jpg);" data-carousel-item>
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out bg-cover bg-center"  style="background-image: url(../assets/MASAK.jpg);" data-carousel-item>
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out bg-cover bg-center"  style="background-image: url(../assets/foto\ pemaparan.jpg);" data-carousel-item>
+                </div>
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 space-x-3 -translate-x-1/2 bottom-5 left-1/2 hidden sm:flex">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 left-0 z-30 items-center justify-center h-full px-4 cursor-pointer group focus:outline-none hidden sm:flex" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 right-0 z-30 items-center justify-center h-full px-4 cursor-pointer group focus:outline-none hidden sm:flex" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+        <!-- selamat datang -->
+        <div class="absolute top-[57%] -translate-y-1/2 left-1/2 -translate-x-1/2">
+            <div class="mx-auto flex flex-col p-[40px] bg-black dark:bg-slate-100 z-40 bg-opacity-40 rounded-b-[200px] dark:bg-opacity-60 max-w-[673px] justify-center items-center">
+                <div class="mb-[36px] py-4 text-center text-slate-200 dark:text-black">
+                    <h1 class="font-bold uppercase mb-4 text-[40px] ">selamat datang</h1>
+                    <p class="text-[24px] uppercase">di kampung bangun sari<br>bekri - lampung tengah</p>  
+                </div>
+                <!-- button -->
+                <div id="scrollButton" class="bg-nature-200 rounded-t-3xl rounded-b-[200px] shadow-lg w-[250px] h-[60px] hover:bg-nature-300 animate-wiggle2 hover:animate-wiggle transition ease-in-out duration-700">
+                    <a href="#deskripsi" class="block px-5 py-3 text-white tracking-wider text-[20px] font-bold">
+                        <span class="relative left-[20%] uppercase">tentang
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none" class="inline-block absolute top-1/2 -translate-y-1/3 -right-1/4">
+                                <path d="M1 13L7 7L1 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden animate-geserBawah"></div>
+    <div class="hidden animate-geserKiri"></div>
+    <div class="hidden animate-geserKanan"></div>
+    <div class="hidden animate-subJudul"></div>
+
+    <div id="konten">
+        <div id="target1" class="text-justify mt-24 mb-10 opacity-0 geserBawah">
+            <p class="w-[80%] max-w-[700px] mx-auto text-[14px] md:text-[18px] lg:text-[22px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi quidem necessitatibus consequatur tempore voluptates architecto tenetur quas nisi, non nobis nostrum optio accusamus obcaecati voluptatibus harum qui expedita ut porro officiis, doloremque laudantium? Omnis soluta inventore aliquid necessitatibus totam, dignissimos maxime, suscipit quas quaerat tenetur spapossimus. Similique veritatis dolorum optio?</p>
+        </div>
+
+        <div class="py-[50px] lg:hidden text-[14px] md:text-[18px]">
+            <h2 class="text-center font-bold text-[24px] opacity-0 subJudul">Visi & Misi</h2>
+            <div class="w-[80%] sm:w-[65%] ssm:my-[30px] mx-auto text-justify opacity-0 geserKiri-2">
+              <h3 class="font-bold text-[20px]">Visi</h3>
+              <p>Kampung Bangun Sari dapat mewujudkan pembangunan yang adil dan merata berdasarkan musyawarah dan mufakat bersama.</p>
+            </div>
+            <div class="w-[80%] sm:w-[65%] ssm:my-[30px] mx-auto text-justify opacity-0 geserKanan">
+                <h3 class="ssm:mt-[30px] sm:mt-[70px] text-[20px] font-bold">Misi</h3>
+                <ol class="list-decimal ml-6">
+                    <li class="opacity-0 geserKanan-2">Mengutamakan peningkatan pembangunan</li>
+                    <li class="opacity-0 geserKanan-3">Mewujudkan peningkatan solidaritas Masyarakat</li>
+                    <li class="opacity-0 geserKanan-4">Peningkatan kualitas pelayanan pemerintahan kampung kepada masyarakat</li>
+                    <li class="opacity-0 geserKanan-5">Peningkatan Kualitas dan kuantitas prasarana umum strategis dalam menunjang penghidupan dan ketahanan ekonomi masyarakat.</li>
+                    <li class="opacity-0 geserKanan-6">Peningkatan peran aktif masyarakat di dalam proses perencanaan maupun pelaksanaan pembangunan sumber daya manusia dan stabilitas keamanan ketertiban masyarakat</li>
+                </ol>
+            </div>
+        </div>
+        
+        
+        <div  class="hidden lg:block py-[50px] text-[20px]">
+            <h2 class="text-center font-bold text-[24px] md:text-[35px] lg:text-[48px] opacity-0 subJudul">Visi & Misi</h2>
+            <div class="w-[50%] mb-[30px] mx-auto flex flex-row gap-2 items-center text-start opacity-0 geserKiri">
+              <p class="text-end">Kampung Bangun Sari dapat mewujudkan pembangunan yang adil dan merata berdasarkan musyawarah dan mufakat bersama.</p>
+              <img class="w-[150px] rounded-xl ml-[30px]" src="../assets/visi.jpg" alt="Visi">
+            </div>
+            <div id="target2" class=""></div>
+            <div class="w-[50%] ssm:mb-[30px] md:mb-[50px] flex flex-row gap-11 items-center mx-auto text-justify opacity-0 geserKanan">
+                <img class="w-[150px] h-[150px] rounded-xl" src="../assets/misi.jpg" alt="web-development's picture">
+                <ol class="list-decimal ml-6">
+                    <li class="opacity-0 geserKanan-2">Mengutamakan peningkatan pembangunan</li>
+                    <li class="opacity-0 geserKanan-3">Mewujudkan peningkatan solidaritas Masyarakat</li>
+                    <li class="opacity-0 geserKanan-4">Peningkatan kualitas pelayanan pemerintahan kampung kepada masyarakat</li>
+                    <li class="opacity-0 geserKanan-5">Peningkatan Kualitas dan kuantitas prasarana umum strategis dalam menunjang penghidupan dan ketahanan ekonomi masyarakat.</li>
+                    <li class="opacity-0 geserKanan-6">Peningkatan peran aktif masyarakat di dalam proses perencanaan maupun pelaksanaan pembangunan sumber daya manusia dan stabilitas keamanan ketertiban masyarakat</li>
+                </ol>
+            </div>
+          </div>
+        
+        <div class="ssm:mt-7 lg:mt-28 w-full">
+            <h2 class="text-center font-bold text-[24px] md:text-[35px] lg:text-[48px] opacity-0 subJudul">Kependudukan</h2>
+            <div class="mt-6 grid grid-cols-2 mx-auto justify-center justify-items-center text-center gap-9 text-[16px] md:text-[24px]">
+                <div class="grid grid-cols-1 col-span-full justify-items-center opacity-0 efek-masuk2">
+                    <img src="../assets/penduduk.png" class="h-16 w-16" alt="penduduk">
+                    <p class="font-bold text-[20px] md:text-[30px] counter" data-target="1543">0</p>
+                    <p>Jumlah Penduduk</p>
+                    <p id="target3" class="translate-y-11"></p>
+                </div>
+                <div class="grid grid-cols-1 justify-items-center opacity-0 geserKiri-2">
+                    <img src="../assets/man.jpg" class="h-16 w-16" alt="pria">
+                    <p class="font-bold text-[30px] counter" data-target="764">0</p>
+                    <p>Laki-Laki</p>
+                </div>
+                <div class="grid grid-cols-1 justify-items-center opacity-0 geserKanan-4">
+                    <img src="../assets/woman.png" class="h-16 w-16" alt="perempuan">
+                    <p class="font-bold text-[30px] counter" data-target="779">0</p>
+                    <p>Perempuan</p>
+                </div>
+                <div class="grid grid-cols-1 col-span-full justify-items-center opacity-0 efek-masuk3-2">
+                    <img src="../assets/kk.png" class="h-16 w-16" alt="kepala keluarga">
+                    <p class="font-bold text-[30px] counter" data-target="520">0</p>
+                    <p>Kepala Keluarga</p>
+                </div>
+                <div class="grid grid-cols-1 justify-items-center  opacity-0 geserKiri-2">
+                    <img src="../assets/muslim.png" class="h-16 w-16" alt="islam">
+                    <p class="font-bold text-[30px] counter" data-target="1509">0</p>
+                    <p>Islam</p>
+                </div>
+                <div class="grid grid-cols-1 justify-items-center opacity-0 geserKanan-4">
+                    <img src="../assets/katolik.jpg" class="h-16 w-16" alt="katolik">
+                    <p class="font-bold text-[30px] counter" data-target="34">0</p>
+                    <p>Katholik</p>
+                </div>
+            </div>   
+        </div>
+
+        
+        
+
+        <div  class="mx-auto px-6 sm:flex sm:flex-col ssm:mt-24">
+            <h2 class="font-bold text-center text-[24px] md:text-[35px] lg:text-[48px] pb-8 md:pt-[80px] lg:pt-[100px] subJudul">Artikel</h2>
+            <!-- item 1 -->
+            <div id="target4" class="mx-auto sm:w-[600px] md:w-[80%] md:max-w-[950px] mb-10 sm:flex sm:flex-row sm:gap-6 md:gap-8">
+                <div class="relative mx-auto ssm:w-[230px] ssm:h-[180px] sm:w-[300px] md:w-[600px] md:h-[300px] sm:h-[200px] bg-cover bg-center self-center rounded-md geserKiri-2 opacity-0" style="background-image: url(https://source.unsplash.com/600x400);">
+                </div>
+                <div class="md:my-auto efek-masuk3 opacity-0">
+                    <div class="max-w-sm mx-auto my-auto">
+                        <div class="py-4 text-justify">
+                            <div class="font-bold text-nature-200 mb-2 md:mb-6 ssm:text-[14px] md:text-[20px] lg:text-[24px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt.</div>
+                            <p class="hidden md:text-[16px] lg:text-[20px] text-slate-600 md:block font-openSans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam odio iste qui eum soluta rerum, eveniet repellat? Recusandae, quis commodi!</p>  
+                        </div>
+                    </div>
+                        <!-- button -->
+                    <div class="bg-nature-200 mt-2 md:mt-8 mb-10 rounded-lg shadow-lg max-w-[298px] md:max-w-fit h-[38px] md:h-[50px] mx-auto  hover:bg-nature-100 text-white hover:animate-wiggle transition ease-in-out duration-700">
+                        <a href="./detail_berita/berita_1.html" class="block ssm:py-1 md:px-5 md:py-3 tracking-wider ssm:text-[16px] text-[20px] font-bold w-full text-center">
+                            <span class="relative">Selengkapnya
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- item 2 -->
+            <div class="mx-auto sm:w-[600px] md:w-[80%] md:max-w-[950px] mb-10 sm:flex sm:flex-row sm:gap-6 md:gap-8">
+                <div class="relative mx-auto w-[230px] h-[180px] sm:w-[300px] md:w-[600px] md:h-[300px] sm:h-[198px] bg-cover bg-center self-center rounded-md geserKiri-3 opacity-0" style="background-image: url(https://source.unsplash.com/600x400);">
+                </div>
+                <div class="md:my-auto efek-masuk3-2 opacity-0">
+                    <div class="max-w-sm mx-auto my-auto">
+                        <div class="py-4 text-justify">
+                            <div class="font-bold text-nature-200 mb-2 md:mb-6 ssm:text-[14px] md:text-[20px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt.</div>
+                            <p class="hidden text-[20px] text-slate-600 md:block font-openSans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam odio iste qui eum soluta rerum, eveniet repellat? Recusandae, quis commodi!</p>  
+                        </div>
+                    </div>
+                    <!-- button -->
+                    <div class="bg-nature-200 mt-2 md:mt-8 mb-10 rounded-lg shadow-lg max-w-[298px] md:max-w-fit h-[38px] md:h-[50px] mx-auto  hover:bg-nature-100 text-white hover:animate-wiggle transition ease-in-out duration-700">
+                        <a href="./detail_berita/berita_2.html" class="block ssm:py-1 md:px-5 md:py-3 tracking-wider ssm:text-[16px] text-[20px] font-bold w-full text-center">
+                            <span class="relative">Selengkapnya
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="group mx-auto">
+                <div class="text-center pb-8 md:hidden group-hover:animate-wiggle transition ease-in-out duration-700">
+                    <a href="./artikel.html" class="tracking-wider text-[#4E944F]">Lihat artikel lainnya 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="inline-block">
+                            <path d="M5 12H19" stroke="#4E944F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 5L19 12L12 19" stroke="#4E944F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hidden md:block mx-auto my-9 group-hover:animate-wiggle transition ease-in-out duration-700">
+                    <a href="./artikel.html" class="tracking-wider text-[#4E944F] md:text-[14px] lg:text-[20px]">Lihat artikel lainnya 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="inline-block">
+                            <path d="M5 12H19" stroke="#4E944F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 5L19 12L12 19" stroke="#4E944F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="footer">
+        <footer class="bg-nature-300 h-[142px] lg:hidden">
+          <div class="w-full max-w-screen-xl mx-auto pt-[20px]">
+            <span class="block sm:hidden text-[11px] text-white text-center pb-[20px]">© Copyright 2024 - Bangun Sari</span>
+            <ul class="flex flex-wrap justify-center items-center mb-6 text-white sm:mb-0 text-center sm:gap-5 md:gap-10 sm:justify-around sm:my-5 ">
+                <li class="mr-4 w-[107px] leading-3 group">
+                    <a href="#" class="text-[9px] group-hover:underline">Kantor Balai Desa</a>
+                    <a href="#" class="text-[9px] group-hover:underline">Desa Bangun Sari</a>
+                </li>
+                <li class="mr-4 leading-3">
+                  <p>|<br>|</p>
+                </li>
+                <li>
+                    <p class="mr-4 hover:underline text-[11px]">(0721) 803018</p>
+                </li>
+                <li class="mr-4 leading-3 hidden sm:block">
+                  <p>|<br>|</p>
+                </li>
+                <li class="hidden sm:block">
+                    <p class="mr-4 hover:underline text-[11px]">veniyunitasari72@gmail.com</p>
+                </li>
+            </ul>
+            <span class="block my-5 text-[11px] text-white text-center sm:hidden">veniyunitasari72@gmail.com</span>
+            <span class="hidden sm:block text-[11px] text-white text-center pb-[20px] sm:mt-7">© Copyright 2024 - Bangun Sari</span>
+          </div>
+        </footer>
+  
+        <footer class="hidden lg:block bg-nature-300 lg:h-[300px] xl:h-[350px] text-white relative font-openSans ">
+          <div class="mx-auto w-full py-11">
+            <div class="flex lg:gap-14 xl:gap-28 justify-center">
+              <div class="max-w-[297px]">
+                <h5 class="text-[16px] font-bold mb-[17px]">Balai Desa Bangun Sari</h5>
+                <p class="text-[16px] text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis mauris nunc, id pharetra augue rhoncus vitae. Morbi tincidunt nulla feugiat tortor ullamcorper, non venenatis tellus auctor. </p>
+              </div>
+              <div>
+                  <h5 class="mb-[20px] font-bold">Contact Us</h5>
+                  <div class="flex flex-row gap-4">
+                    <div class="flex flex-col gap-4">
+                        <svg width="12" height="17" viewBox="0 0 12 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.375 15.6875C0.8125 9.125 0 8.4375 0 6C0 2.6875 2.65625 0 6 0C9.3125 0 12 2.6875 12 6C12 8.4375 11.1562 9.125 6.59375 15.6875C6.3125 16.125 5.65625 16.125 5.375 15.6875ZM6 8.5C7.375 8.5 8.5 7.40625 8.5 6C8.5 4.625 7.375 3.5 6 3.5C4.59375 3.5 3.5 4.625 3.5 6C3.5 7.40625 4.59375 8.5 6 8.5Z" fill="white"/>
+                        </svg>
+                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5312 11.3125C15.7812 11.4375 15.9688 11.7188 15.9688 12.0312C15.9688 12.0625 15.9688 12.125 15.9688 12.1875L15.2188 15.4375C15.125 15.7812 14.8438 16 14.5 16C6.46875 16 0 9.53125 0 1.5C0 1.15625 0.21875 0.875 0.5625 0.78125L3.8125 0.03125C3.875 0.03125 3.9375 0 3.96875 0C4.28125 0 4.5625 0.1875 4.6875 0.46875L6.1875 3.96875C6.21875 4.0625 6.25 4.15625 6.25 4.25C6.25 4.5 6.125 4.71875 5.96875 4.84375L4.0625 6.40625C5.21875 8.84375 7.15625 10.7812 9.59375 11.9375L11.1562 10.0312C11.2812 9.875 11.5 9.75 11.7188 9.75C11.8438 9.75 11.9375 9.78125 12.0312 9.8125L15.5312 11.3125Z" fill="white"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0,0,256,256">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M36.335,46.238h-25.268c-5.733,0 -9.272,-4.294 -9.272,-10.027c0,0 0.633,-4.487 0,-15.099c-0.124,-2.072 0.59,-7.243 0.59,-7.243c0,-5.733 3.963,-10.121 9.697,-10.121c0,0 8.359,-0.665 10.947,-0.472c7.949,0.594 11.267,-0.406 12.952,-0.425c6.347,-0.071 9.319,4.883 9.319,10.616c0,0 0.283,10.805 0.283,12.646c0,4.011 -0.613,10.003 -0.613,10.003c0.613,4.955 -2.902,10.122 -8.635,10.122z" fill="#4f6f52"></path><path d="M37.053,21.946c0.106,-0.019 0.228,-0.008 0.335,-0.003c0.252,-0.459 -0.033,-1.342 -0.089,-1.845c-0.087,-0.769 -0.173,-1.539 -0.26,-2.308c-0.02,-0.179 -0.05,-0.377 -0.189,-0.491c-0.076,-0.063 -0.174,-0.09 -0.27,-0.116c-0.904,-0.245 -1.809,-0.491 -2.713,-0.736c-0.389,-0.106 -0.782,-0.212 -1.139,-0.399c-0.912,-0.477 -1.485,-1.413 -1.937,-2.338c-0.389,-0.796 -0.723,-1.618 -1,-2.459c-0.229,-0.697 -0.047,-1.343 -0.855,-1.389c-0.504,-0.029 -1.008,-0.051 -1.512,-0.067c-1.069,-0.034 -2.144,-0.009 -3.208,-0.032c-0.259,0.924 -0.143,1.942 -0.189,2.892c-0.054,1.127 -0.082,2.255 -0.085,3.383c-0.004,2.256 0.095,4.512 0.298,6.759c0.074,0.821 0.162,1.642 0.205,2.465c0.053,1.035 0.034,2.071 0.014,3.107c-0.018,0.963 -0.038,1.936 -0.283,2.867c-0.293,1.111 -0.911,2.135 -1.758,2.912c-0.349,0.32 -0.741,0.602 -1.182,0.774c-0.853,0.332 -1.816,0.228 -2.7,-0.011c-0.763,-0.206 -1.518,-0.518 -2.09,-1.062c-0.883,-0.839 -1.218,-2.164 -0.987,-3.36c0.231,-1.195 0.977,-2.254 1.933,-3.008c0.978,-0.77 2.326,-1.415 3.571,-1.572c0.086,-0.202 0.104,-0.243 0.105,-0.457c0.001,-0.172 0.063,-0.311 0.073,-0.478c0.024,-0.387 -0.002,-0.786 -0.002,-1.174c0,-0.498 0.084,-1.073 -0.016,-1.559c-0.033,-0.159 -0.069,-0.298 -0.128,-0.435c-0.021,-0.049 -0.024,-0.108 -0.049,-0.159c-0.031,-0.064 -0.096,-0.102 -0.082,-0.185c0.021,-0.004 0.029,-0.079 0.05,-0.083l-0.059,-0.071c0.016,0 0.043,0.071 0.059,0.071c-0.715,0 -1.417,-0.132 -2.126,-0.081c-0.725,0.053 -1.444,0.19 -2.139,0.406c-1.366,0.424 -2.64,1.149 -3.688,2.124c-1.765,1.642 -2.87,3.976 -3.022,6.382c-0.048,0.757 -0.004,1.515 0.079,2.268c0.077,0.696 0.105,1.447 0.449,2.066c1.024,1.842 2.288,3.358 4.038,4.568c0.455,0.315 0.932,0.606 1.449,0.804c0.814,0.311 1.701,0.379 2.573,0.372c1.256,-0.01 2.51,-0.17 3.729,-0.473c1.558,-0.387 2.945,-0.889 4.073,-2.074c1.026,-1.078 1.732,-2.436 2.179,-3.847c0.618,-1.951 0.779,-4.012 0.936,-6.053c0.054,-0.697 0.107,-1.395 0.161,-2.092c0.078,-1.009 0.153,-2.022 0.132,-3.035c-0.011,-0.516 -0.045,-1.031 -0.12,-1.542c-0.069,-0.478 -0.283,-0.987 -0.307,-1.454c0.084,0.023 0.176,0.057 0.252,0.104c0.156,0.097 0.308,0.224 0.468,0.313c2.202,1.219 4.513,1.811 7.023,1.811c-0.016,0 -0.326,0 -0.342,0" fill="#ffffff"></path></g></g>
+                        </svg>
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.6875 3.96875C15.8125 3.875 16 3.96875 16 4.125V10.5C16 11.3438 15.3125 12 14.5 12H1.5C0.65625 12 0 11.3438 0 10.5L0 4.125C0 3.96875 0.15625 3.875 0.28125 3.96875C1 4.53125 1.90625 5.21875 5.09375 7.53125C5.75 8 6.875 9.03125 8 9.03125C9.09375 9.03125 10.25 8 10.875 7.53125C14.0625 5.21875 14.9688 4.53125 15.6875 3.96875ZM8 8C7.25 8.03125 6.21875 7.09375 5.6875 6.71875C1.53125 3.71875 1.21875 3.4375 0.28125 2.6875C0.09375 2.5625 0 2.34375 0 2.09375L0 1.5C0 0.6875 0.65625 0 1.5 0H14.5C15.3125 0 16 0.6875 16 1.5V2.09375C16 2.34375 15.875 2.5625 15.6875 2.6875C14.75 3.4375 14.4375 3.71875 10.2812 6.71875C9.75 7.09375 8.71875 8.03125 8 8Z" fill="white"/>
+                        </svg>                                            
+                    </div>
+                    <div class="flex flex-col gap-[11px] text-[16px] justify-center">
+                      <a href="https://maps.app.goo.gl/9LUZqXdvxp6oqveX8"    target="_blank" class="leading-[16px]">Kantor Balai Desa - Desa Bangun Sari</a>
+                      <p class="leading-[30px]">(62)853 8183 8664</p>
+                      <p class="leading-[14px]">desa.bangun.sari</p>
+                      <p class="leading-[24px]">veniyunitasari72@gmail.com</p>                  
+                    </div>
+                  </div>
+              </div>
+              <div>
+                  <h5 class="font-bold text-[16px] mb-[19px]">Map Location</h5>
+                  <div class="group hover:scale-95 transition-all duration-700 overflow-hidden rounded-xl">
+                    <a href="https://goo.gl/maps/x8coxsgcjoCozREX9" target="_blank">
+                        <img src="../assets/footer/maps.png" alt="bangun sari maps" class="h-[176px] w-[237px] group hover:scale-[1.35] transition-all duration-700">
+                    </a>
+                  </div>
+              </div>
+            </div>
+            <div class="absolute bottom-[31px] left-1/2 -translate-x-1/2">
+                <p class="text-[11px] text-white">© Copyright 2024 Bangun Sari</p>
+            </div>
+          </div>
+        </footer>
+    </section>
+
+    <script src="../js/animation.js"></script>
+
+    <script src="../js/scrollButton.js"></script>
+
+    <script src="../js/dropdown.js"></script>
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+    .anim-delay-300 {
+      animation-delay: 300ms;
+    }
+    .anim-delay-700 {
+        animation-delay: 700ms;
+      }
+    .anim-delay-1 {
+        animation-delay: 1000ms;    
+      }
+    .anim-delay-2 {
+        animation-delay: 2000ms;    
+      }
+    .anim-delay-3 {
+        animation-delay: 3000ms;    
+      }
+    /* Tambahkan class lainnya seperti di atas */
+  };
