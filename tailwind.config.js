@@ -37,7 +37,7 @@ module.exports = {
       keyframes: {
         masuk: {
           from: {
-            transform: 'scale(2)',
+            transform: 'scale(1.2)',
             opacity: '0',
           },
           to: {

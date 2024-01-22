@@ -11,24 +11,25 @@ document.addEventListener('DOMContentLoaded', function() {
     menu.classList.toggle('animate-dropDown');
   });
 
+  function toggleSubmenu(event, submenu) {
+    // Periksa apakah target adalah bagian dari submenu
+    if (!submenu.contains(event.target)) {
+      submenu.classList.toggle('hidden');
+      submenu.classList.toggle('absolute');
+      submenu.classList.toggle('animate-subDropDown');
+      event.preventDefault(); // Mencegah navigasi link default pada mobile
+    }
+  }
+
   saranaPrasaranaMenu.addEventListener('click', function(event) {
-      if (window.innerWidth < 1024) { // Ganti 1024 dengan breakpoint untuk versi mobile Anda
-        saranaPrasaranaSubmenu.classList.toggle('hidden');
-        saranaPrasaranaSubmenu.classList.toggle('absolute');
-        saranaPrasaranaSubmenu.classList.toggle('animate-subDropDown');
-        event.preventDefault(); // Mencegah navigasi link default pada mobile
-      } 
+    if (window.innerWidth < 1024) { // Ganti 1024 dengan breakpoint untuk versi mobile Anda
+      toggleSubmenu(event, saranaPrasaranaSubmenu);
+    } 
   });
 
   potensiMenu.addEventListener('click', function(event) {
     if (window.innerWidth < 1024) { // Pastikan breakpoint ini sesuai dengan konfigurasi Tailwind CSS Anda
-      potensiSubmenu.classList.toggle('hidden');
-      potensiSubmenu.classList.toggle('absolute');
-      potensiSubmenu.classList.toggle('animate-subDropDown');
-      event.preventDefault(); // Mencegah navigasi link default pada mobile
+      toggleSubmenu(event, potensiSubmenu);
     }
   });
-});   
-
-
-
+});
